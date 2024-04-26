@@ -1,12 +1,12 @@
-import {useEffect, useState} from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, get, child, onValue } from "firebase/database";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     (async () => {
@@ -19,14 +19,14 @@ function App() {
       onValue(child(dbRef, "/v0/topstories"), (snap) => {
         const data = snap.val();
         console.log(data);
-      })
+      });
 
       // Fetch Data Once
-      get(child(dbRef, "v0/user/jl")).then(snap => {
+      get(child(dbRef, "v0/user/jl")).then((snap) => {
         console.log(snap.val());
-      })
-  })()
-  }, [])
+      });
+    })();
+  }, []);
 
   return (
     <>
@@ -51,7 +51,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
