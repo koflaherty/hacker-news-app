@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, get, child, onValue } from "firebase/database";
+import {initializeApp} from "firebase/app";
+import {getDatabase, ref, get, child, onValue} from "firebase/database";
+import {LatestNews} from "./features/news/components/LatestNews.tsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -50,6 +51,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <LatestNews />
     </>
   );
 }
