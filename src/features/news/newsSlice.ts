@@ -5,7 +5,7 @@ export interface NewsState {
 }
 
 const initialState: NewsState = {
-  latest: ["E"],
+  latest: [],
 };
 
 const newsSlice = createSlice({

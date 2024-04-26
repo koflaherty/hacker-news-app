@@ -1,33 +1,11 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import {initializeApp} from "firebase/app";
-import {getDatabase, ref, get, child, onValue} from "firebase/database";
 import {LatestNews} from "./features/news/components/LatestNews.tsx";
 
 function App() {
   const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    (async () => {
-      const app = initializeApp({
-        databaseURL: "https://hacker-news.firebaseio.com",
-      });
-      const db = getDatabase(app);
-      const dbRef = ref(db);
-      // Listen to Changes
-      onValue(child(dbRef, "/v0/topstories"), (snap) => {
-        const data = snap.val();
-        console.log(data);
-      });
-
-      // Fetch Data Once
-      get(child(dbRef, "v0/user/jl")).then((snap) => {
-        console.log(snap.val());
-      });
-    })();
-  }, []);
 
   return (
     <>
