@@ -16,11 +16,23 @@ export const hackerNewsApi = createApi({
     return {data: snap.val()};
   },
   endpoints: (builder) => ({
-    getLatest: builder.query<string[], {limit?: number}>({
+    getLatest: builder.query<
+      {
+        results: string[];
+        hasMore: boolean;
+      },
+      {limit?: number}
+    >({
       query: () => "/v0/topstories",
-      transformResponse: (response, _meta, {limit}) => {
-        if (limit && Array.isArray(response)) return response.slice(0, limit);
-        else return response;
+      transformResponse: (response: string[], _meta, {limit}) => {
+        const results =
+          limit && Array.isArray(response)
+            ? response.slice(0, limit)
+            : response;
+        return {
+          results: results,
+          hasMore: !!limit && response.length > limit,
+        };
       },
     }),
     getDetails: builder.query({
