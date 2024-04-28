@@ -1,19 +1,15 @@
 import {createApi} from "@reduxjs/toolkit/query/react";
-import {initializeApp} from "firebase/app";
-import {child, get, getDatabase, ref} from "firebase/database";
+import {FirebaseClient} from "../../../services/FirebaseClient.ts";
 
-const app = initializeApp({
+const hackerNewFirebaseClient = new FirebaseClient({
   databaseURL: "https://hacker-news.firebaseio.com",
 });
 
-const db = getDatabase(app);
-const dbRef = ref(db);
-
-export const hackerNewsApi = createApi({
+export const hackerNewsFirebaseApi = createApi({
   reducerPath: "hacker-news-api",
   baseQuery: async (url) => {
-    const snap = await get(child(dbRef, url));
-    return {data: snap.val()};
+    const data = await hackerNewFirebaseClient.getURL(url);
+    return {data};
   },
   endpoints: (builder) => ({
     getLatest: builder.query<

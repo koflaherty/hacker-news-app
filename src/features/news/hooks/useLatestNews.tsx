@@ -1,11 +1,11 @@
-import {hackerNewsApi} from "../hacker-news-api.ts";
+import {hackerNewsFirebaseApi} from "../api/hacker-news-firebase-api.ts";
 import {useCallback, useState} from "react";
 
-const DEFAULT_QUERY_LIMIT = 10;
+export const DEFAULT_QUERY_LIMIT = 10;
 
 export const useLatestNews = () => {
   const [limit, setLimit] = useState(DEFAULT_QUERY_LIMIT);
-  const queryResults = hackerNewsApi.useGetLatestQuery({
+  const queryResults = hackerNewsFirebaseApi.useGetLatestQuery({
     limit: limit,
   });
 
