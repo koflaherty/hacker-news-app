@@ -9,7 +9,7 @@ export const StarredNews = () => {
       <ul>
         {Object.keys(starred).map((id) => (
           <li key={id}>
-            <NewsDetail key={id} id={id} />
+            <NewsDetail id={id} />
           </li>
         ))}
       </ul>

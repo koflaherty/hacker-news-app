@@ -5,4 +5,5 @@
   --color-typography: #{map-get($colors, black)};
   --color-typography-light: #{map-get($colors, black-50)};
   --color-bg: #{map-get($colors, white)};
+  --color-translucent: #{map-get($colors, black-5)}
 }

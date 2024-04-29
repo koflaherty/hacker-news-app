@@ -1,5 +1,6 @@
 import {createApi} from "@reduxjs/toolkit/query/react";
 import {FirebaseClient} from "../../../services/FirebaseClient.ts";
+import {News} from "./entities.ts";
 
 const hackerNewFirebaseClient = new FirebaseClient({
   databaseURL: "https://hacker-news.firebaseio.com",
@@ -31,7 +32,7 @@ export const hackerNewsFirebaseApi = createApi({
         };
       },
     }),
-    getDetails: builder.query({
+    getDetails: builder.query<News, {id: string}>({
       query: ({id}) => {
         return `/v0/item/${id}`;
       },

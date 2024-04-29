@@ -1,7 +1,7 @@
 import {Logo} from "./Logo.tsx";
 import {NavigationLinks, NavLink} from "./NavigationLinks.tsx";
 import {useMemo} from "react";
-import styles from "./component-styles.module.scss";
+import styles from "./styles.module.scss";
 
 export const Nav = () => {
   const links: NavLink[] = useMemo(

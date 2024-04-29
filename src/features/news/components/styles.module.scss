@@ -1,0 +1,67 @@
+@import "../../../theme/mixins";
+
+$newsDetailMargin: 0 0 18px 0;
+$newSkeletonHeight: 44.5px;
+
+.newsList {
+  @include typography(listStyle);
+  color: var(--color-typography-light);
+}
+
+.newsDetail {
+  margin: $newsDetailMargin;
+
+  #{&}TitleContainer {
+    display: flex;
+    align-items: end;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  #{&}Title {
+    @include typography(title);
+    color: var(--color-typography);
+  }
+  #{&}TitleLabel {
+    @include typography(subtext);
+    color: var(--color-typography-light);
+    margin-bottom: 1.5px;
+  }
+
+  #{&}Subtext {
+    @include clearListStyles;
+    @include typography(subtext);
+    display: flex;
+    align-items: center;
+
+    li {
+      &:not(:first-child):before {
+        content: "|";
+        padding: 0 2px;
+      }
+    }
+
+
+  }
+}
+
+.newsDetailSkeleton {
+  width: 100%;
+  height: $newSkeletonHeight;
+  background: var(--color-translucent);
+  margin: $newsDetailMargin;
+}
+
+.newsDetailError {
+  width: 100%;
+  min-height: $newSkeletonHeight;
+  background: var(--color-translucent);
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  flex-direction: column;
+  margin: $newsDetailMargin;
+}

@@ -1,6 +1,6 @@
 import {FC, ReactNode} from "react";
 import {Link, useLocation} from "react-router-dom";
-import style from "./component-styles.module.scss";
+import style from "./styles.module.scss";
 import classNames from "classnames";
 
 export type NavLink = {

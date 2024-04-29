@@ -26,6 +26,12 @@ $typography: (
     weight: 700,
     lineHeight: 20px,
   ),
+  listStyle: (
+    fontFamily: $ubuntuMono,
+    fontSize: 18px,
+    weight: 400,
+    lineHeight: 18px,
+  ),
   subtext: (
     fontFamily: $openSans,
     fontSize: 10px,
@@ -44,8 +50,10 @@ $colors: (
   primary: #FE7139,
   white: #FFF,
   white-50: rgba(255,255,255,0.5),
+  white-5: rgba(255,255,255,0.05),
   black: #000,
-  black-50: rgba(255,255,255,0.5),
+  black-50: rgba(0,0,0,0.5),
+  black-5: rgba(0,0,0,0.05),
   dark: #1E2025,
 );
 
