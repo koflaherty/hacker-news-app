@@ -1,0 +1,39 @@
+@import "../../theme/mixins";
+
+.footer {
+  border-top: 2px solid var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 1.75rem
+}
+
+.footerLogo {
+  @include typography(logo);
+}
+
+
+.footerLinks {
+  display: flex;
+  @include clearListStyles;
+}
+
+.footerLink {
+  @include typography(base);
+
+  a {
+    color: var(--color-typography);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &:not(:first-child):before {
+    content: "|";
+    padding: 0 5px;
+    @include typography(base);
+  }
+}

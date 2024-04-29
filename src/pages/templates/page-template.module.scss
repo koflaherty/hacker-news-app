@@ -1,12 +1,12 @@
 @import "../../theme/mixins";
 
 .pageTemplate {
-  padding: 3.5rem 6.5rem;
+  padding: 3.5rem 6.5rem 0 6.5rem;
   max-width: 100%;
   overflow: hidden;
   word-wrap: break-word;
   @include mobile {
-    padding: 1rem 2rem;
+    padding: 2rem 2rem 0 2rem;
   }
 
   // Horizontal Bar
@@ -19,4 +19,9 @@
     height: 4px;
     background-color: var(--color-primary);
   }
+}
+
+.pageTemplateContent {
+  margin-bottom: 60px;
+  min-height: 50vh;
 }
