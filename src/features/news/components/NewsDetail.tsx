@@ -5,6 +5,7 @@ import styles from "./styles.module.scss";
 import {useNewsInfo} from "../hooks/useNewsInfo.ts";
 import pluralize from "pluralize";
 import {useBaseUrl} from "../hooks/useBaseUrl.ts";
+import {StarIcon} from "./StarIcon.tsx";
 
 export const NewsDetail = ({id}: {id: string}) => {
   const dispatch = useAppDispatch();
@@ -33,11 +34,13 @@ export const NewsDetail = ({id}: {id: string}) => {
           </li>
           <li>
             <button
+              className={styles.newsDetailSaveButton}
               onClick={() => {
                 dispatch(toggleStarred(id));
               }}
             >
-              {isStarred ? "un-star" : "star"}
+              <StarIcon size={10} isStarred={isStarred} />
+              {isStarred ? "Saved" : "Save"}
             </button>
           </li>
         </ul>

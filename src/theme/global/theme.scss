@@ -2,6 +2,7 @@
 
 :root {
   --color-primary: #{map-get($colors, primary)};
+  --color-primary-translucent: #{transparentize(map-get($colors, primary), 0.90)};
   --color-typography: #{map-get($colors, black)};
   --color-typography-light: #{map-get($colors, black-50)};
   --color-bg: #{map-get($colors, white)};

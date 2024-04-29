@@ -8,6 +8,19 @@ $newSkeletonHeight: 44.5px;
   color: var(--color-typography-light);
 }
 
+.starredNews {
+  position: relative;
+  list-style-type: none;
+
+  #{&}BigstarButton {
+    position: absolute;
+    left: -32px;
+    top: 2px;
+    border: none;
+    background: none;
+  }
+}
+
 .newsDetail {
   margin: $newsDetailMargin;
 
@@ -40,8 +53,24 @@ $newSkeletonHeight: 44.5px;
         padding: 0 2px;
       }
     }
+  }
 
+  #{&}SaveButton {
+    border: none;
+    background: none;
+    padding: 0 1px;
+    @include typography(subtext);
+    color: var(--color-typography-light);
+    border-radius: 2px;
 
+    &:hover, &:active {
+      background: var(--color-primary-translucent);
+    }
+    svg {
+      position: relative;
+      top: 1px;
+      margin-right: 2px;
+    }
   }
 }
 
