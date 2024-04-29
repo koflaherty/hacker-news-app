@@ -1,16 +1,17 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import {newsReducer} from "../features/news/newsSlice.ts";
 import {hackerNewsFirebaseApi} from "../features/news/api/hacker-news-firebase-api.ts";
-import {persistReducer, persistStore} from "redux-persist";
-import storage from "redux-persist/lib/storage";
 import {
+  persistReducer,
+  persistStore,
   FLUSH,
+  REHYDRATE,
   PAUSE,
   PERSIST,
   PURGE,
   REGISTER,
-  REHYDRATE,
-} from "redux-persist/es/constants"; // defaults to localStorage for web
+} from "redux-persist";
+import storage from "redux-persist/lib/storage";
 
 const persistConfig = {
   key: "root",

@@ -1,27 +1,27 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 export interface NewsState {
-  stared: Record<string, true>;
+  starred: Record<string, true>;
 }
 
 const initialState: NewsState = {
-  stared: {},
+  starred: {},
 };
 
 const newsSlice = createSlice({
   name: "news",
   initialState: initialState,
   reducers: {
-    toggleStared: (state, action: PayloadAction<string>) => {
+    toggleStarred: (state, action: PayloadAction<string>) => {
       const id = action.payload;
-      if (state.stared[id]) {
-        delete state.stared[id];
+      if (state.starred[id]) {
+        delete state.starred[id];
       } else {
-        state.stared[id] = true;
+        state.starred[id] = true;
       }
     },
   },
 });
 
-export const {toggleStared} = newsSlice.actions;
+export const {toggleStarred} = newsSlice.actions;
 export const newsReducer = newsSlice.reducer;
