@@ -7,9 +7,11 @@ export const LatestNews = () => {
   const {data, isError, isLoading, viewMore} = useLatestNews();
 
   if (isLoading) {
-    <div>
-      <p>Loading..</p>
-    </div>;
+    return (
+      <div>
+        <p>Loading..</p>
+      </div>
+    );
   } else if (isError) {
     return (
       <div>

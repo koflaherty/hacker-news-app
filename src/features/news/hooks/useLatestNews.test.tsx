@@ -7,6 +7,9 @@ import {FirebaseClient} from "../../../services/FirebaseClient.ts";
 import {mockHackerNewsFirebaseAPIData} from "../api/mockHackerNewsFirebaseAPIData.ts";
 
 jest.mock("../../../services/FirebaseClient.ts");
+const FirebaseClientMocked = FirebaseClient as jest.MockedClass<
+  typeof FirebaseClient
+>;
 
 describe("useLatestNews", () => {
   const wrapper: React.FC<{children: ReactNode}> = ({children}) => (
@@ -15,14 +18,14 @@ describe("useLatestNews", () => {
 
   beforeEach(() => {
     // This sets the mock implementation for this test only
-    (FirebaseClient.prototype.getURL as jest.Mock).mockImplementation(
+    (FirebaseClientMocked.prototype.getURL as jest.Mock).mockImplementation(
       (url) => mockHackerNewsFirebaseAPIData[url],
     );
   });
 
   afterEach(() => {
     // Clear all instances and calls to constructor and all methods:
-    FirebaseClient.mockClear();
+    FirebaseClientMocked.mockClear();
   });
 
   it("should fetch latest news limited by page size", async () => {
