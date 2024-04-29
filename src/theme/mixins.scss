@@ -1,0 +1,15 @@
+@import "./variables.scss";
+
+@mixin typography($key) {
+  $typeStyle: map-get($typography, $key);
+  font-family: map-get($typeStyle, fontFamily);
+  font-size: map-get($typeStyle, fontSize);
+  font-weight: map-get($typeStyle, weight);
+  line-height: map-get($typeStyle, lineHeight);
+}
+
+@mixin mobile {
+  @media (max-width: $mobile-break) {
+    @content;
+  }
+}

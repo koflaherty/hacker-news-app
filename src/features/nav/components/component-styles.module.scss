@@ -1,0 +1,49 @@
+@import "../../../theme/mixins";
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.navigationLinks {
+  @include typography(button);
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.navigationLink {
+  @include typography(base);
+
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.navigationLinkActive {
+    @include typography(xbold);
+    color: var(--color-primary);
+  }
+
+  &:not(:first-child):before {
+    content: "|";
+    padding: 0 5px;
+    @include typography(base);
+    color: var(--color-typography);
+  }
+}
+
+.logo {
+  height: 33px;
+}

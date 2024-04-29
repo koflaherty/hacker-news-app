@@ -1,19 +1,12 @@
-import {Link} from "react-router-dom";
 import {PropsWithChildren} from "react";
+import styles from "./page-template.module.scss";
+import {Nav} from "../../features/nav/components/Nav.tsx";
 
 export const PageTemplate = ({children}: PropsWithChildren) => {
   return (
-    <>
-      <div>
-        <h1>Hacker News</h1>
-        <div>
-          <Link to={"/"}>latest</Link>
-        </div>
-        <div>
-          <Link to={"/starred"}>starred</Link>
-        </div>
-      </div>
+    <div className={styles.pageTemplate}>
+      <Nav />
       {children}
-    </>
+    </div>
   );
 };

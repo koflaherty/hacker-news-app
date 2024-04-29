@@ -6,14 +6,13 @@ export const StarredNews = () => {
 
   return (
     <div>
-      <h1>Latest News</h1>
-      <ol>
+      <ul>
         {Object.keys(starred).map((id) => (
           <li key={id}>
             <NewsDetail key={id} id={id} />
           </li>
         ))}
-      </ol>
+      </ul>
     </div>
   );
 };

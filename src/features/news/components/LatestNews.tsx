@@ -6,7 +6,6 @@ export const LatestNews = () => {
 
   return (
     <div>
-      <h1>Latest News</h1>
       <ol>
         {(data?.results ?? []).map((id) => (
           <li key={id}>

@@ -1,0 +1,52 @@
+$ubuntuMono: "Ubuntu Mono", monospace;
+$openSans: "Open Sans", sans-serif;
+
+$typography: (
+  base: (
+    fontFamily: $openSans,
+    fontSize: 14px,
+    weight: 400,
+    lineHeight: 19.07px,
+  ),
+  xbold: (
+    fontFamily: $openSans,
+    fontSize: 14px,
+    weight: 800,
+    lineHeight: 19.07px,
+  ),
+  label: (
+    fontFamily: $openSans,
+    fontSize: 16px,
+    weight: 700,
+    lineHeight: 21.79px,
+  ),
+  title: (
+    fontFamily: $ubuntuMono,
+    fontSize: 18px,
+    weight: 700,
+    lineHeight: 20px,
+  ),
+  subtext: (
+    fontFamily: $openSans,
+    fontSize: 10px,
+    weight: 400,
+    lineHeight: 13.62px,
+  ),
+  button: (
+    fontFamily: $openSans,
+    fontSize: 14px,
+    weight: 600,
+    lineHeight: 19.07px,
+  ),
+);
+
+$colors: (
+  primary: #FE7139,
+  white: #FFF,
+  white-50: rgba(255,255,255,0.5),
+  black: #000,
+  black-50: rgba(255,255,255,0.5),
+  dark: #1E2025,
+);
+
+$mobile-break: 720px;

@@ -1,0 +1,8 @@
+@import "../mixins";
+@import "normalize.css";
+@import "theme";
+
+html, body {
+  @include typography(base);
+  background: var(--color-bg);
+}
