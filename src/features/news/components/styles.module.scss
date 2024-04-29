@@ -8,14 +8,18 @@ $newSkeletonHeight: 44.5px;
   color: var(--color-typography-light);
 }
 
+.inlineWithList {
+  padding-left: 40px;
+}
+
 .starredNews {
   position: relative;
   list-style-type: none;
 
   #{&}BigstarButton {
     position: absolute;
-    left: -32px;
-    top: 2px;
+    left: -37px;
+    top: 1px;
     border: none;
     background: none;
   }
@@ -34,6 +38,11 @@ $newSkeletonHeight: 44.5px;
   #{&}Title {
     @include typography(title);
     color: var(--color-typography);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
   #{&}TitleLabel {
     @include typography(subtext);

@@ -1,6 +1,7 @@
 import {NewsDetail} from "./NewsDetail.tsx";
 import {useLatestNews} from "../hooks/useLatestNews.tsx";
 import styles from "./styles.module.scss";
+import {Button} from "../../../ui/Button.tsx";
 
 export const LatestNews = () => {
   const {data, isError, isLoading, viewMore} = useLatestNews();
@@ -26,9 +27,11 @@ export const LatestNews = () => {
             </li>
           ))}
         </ol>
-        <button onClick={viewMore} disabled={!data?.hasMore}>
-          show more
-        </button>
+        <div className={styles.inlineWithList}>
+          <Button onClick={viewMore} disabled={!data?.hasMore}>
+            show more
+          </Button>
+        </div>
       </div>
     );
   }

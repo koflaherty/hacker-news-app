@@ -23,7 +23,9 @@ export const NewsDetail = ({id}: {id: string}) => {
     return (
       <div className={styles.newsDetail}>
         <div className={styles.newsDetailTitleContainer}>
-          <div className={styles.newsDetailTitle}>{data.title}</div>
+          <a className={styles.newsDetailTitle} href={data.url}>
+            {data.title}
+          </a>
           <div className={styles.newsDetailTitleLabel}>({baseUrl})</div>
         </div>
 

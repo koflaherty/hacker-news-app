@@ -1,6 +1,7 @@
 @import "../variables";
 
 :root {
+  --color-white: #{map-get($colors, white)};
   --color-primary: #{map-get($colors, primary)};
   --color-primary-translucent: #{transparentize(map-get($colors, primary), 0.90)};
   --color-typography: #{map-get($colors, black)};
