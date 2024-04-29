@@ -55,6 +55,7 @@ $newSkeletonHeight: 44.5px;
     @include typography(subtext);
     display: flex;
     align-items: center;
+    color: var(--color-typography-light);
 
     li {
       &:not(:first-child):before {
