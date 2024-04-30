@@ -4,7 +4,7 @@ import {Provider} from "react-redux";
 import {store} from "@store/store.ts";
 import React, {act, ReactNode} from "react";
 import {FirebaseClient} from "@services/FirebaseClient.ts";
-import {mockHackerNewsFirebaseAPIData} from "@features/news/api/mockHackerNewsFirebaseAPIData.ts";
+import {mockData} from "@features/news/api/mockData.ts";
 
 jest.mock("../../../services/FirebaseClient.ts");
 const FirebaseClientMocked = FirebaseClient as jest.MockedClass<
@@ -19,7 +19,7 @@ describe("useLatestNews", () => {
   beforeEach(() => {
     // This sets the mock implementation for this test only
     (FirebaseClientMocked.prototype.getURL as jest.Mock).mockImplementation(
-      (url) => mockHackerNewsFirebaseAPIData[url],
+      (url) => mockData[url],
     );
   });
 

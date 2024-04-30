@@ -3,7 +3,7 @@ import {LatestNews} from "./LatestNews.tsx";
 import React, {ReactNode} from "react";
 import {Provider} from "react-redux";
 import {store} from "@store/store.ts";
-import {mockHackerNewsFirebaseAPIData} from "@features/news/api/mockHackerNewsFirebaseAPIData.ts";
+import {mockData} from "@features/news/api/mockData.ts";
 import {FirebaseClient} from "@services/FirebaseClient.ts";
 
 jest.mock("../../../services/FirebaseClient.ts");
@@ -19,7 +19,7 @@ describe("LatestNews", () => {
     // This sets the mock implementation for this test only
     (FirebaseClientMocked.prototype.getURL as jest.Mock).mockImplementation(
       (url) => {
-        return mockHackerNewsFirebaseAPIData[url];
+        return mockData[url];
       },
     );
   });

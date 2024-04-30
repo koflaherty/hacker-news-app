@@ -10,7 +10,7 @@ interface News {
   url: string;
 }
 
-export const mockHackerNewsFirebaseAPIData: Record<string, News | number[]> = {
+export const mockData: Record<string, News | number[]> = {
   "/v0/topstories": [
     40189346, 40187656, 40189447, 40187971, 40187379, 40189970, 40180509,
     40187334, 40155713, 40164310, 40179566, 40189357, 40187882, 40184659,
