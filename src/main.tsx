@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {Provider} from "react-redux";
-import {store} from "./store/store.ts";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {index} from "./pages";
-import {starred} from "./pages/starred.tsx";
+import {index} from "@pages/index.tsx";
+import {starred} from "@pages/starred.tsx";
 import "./theme/global/main.scss";
+import {store} from "@store/store.ts";
 
 const router = createBrowserRouter([index, starred]);
 

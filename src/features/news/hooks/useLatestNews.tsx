@@ -1,4 +1,4 @@
-import {hackerNewsFirebaseApi} from "../api/hacker-news-firebase-api.ts";
+import {hackerNewsFirebaseApi} from "@features/news/api/hacker-news-firebase-api.ts";
 import {useCallback, useState} from "react";
 
 export const DEFAULT_QUERY_LIMIT = 10;

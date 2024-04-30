@@ -1,5 +1,5 @@
 import {createApi} from "@reduxjs/toolkit/query/react";
-import {FirebaseClient} from "../../../services/FirebaseClient.ts";
+import {FirebaseClient} from "@services/FirebaseClient.ts";
 import {News} from "./entities.ts";
 
 const hackerNewFirebaseClient = new FirebaseClient({

@@ -1,6 +1,6 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import {newsReducer} from "../features/news/newsSlice.ts";
-import {hackerNewsFirebaseApi} from "../features/news/api/hacker-news-firebase-api.ts";
+import {newsReducer} from "@features/news/newsSlice.ts";
+import {hackerNewsFirebaseApi} from "@features/news/api/hacker-news-firebase-api.ts";
 import {
   persistReducer,
   persistStore,

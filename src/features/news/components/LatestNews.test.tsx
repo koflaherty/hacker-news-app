@@ -2,7 +2,7 @@ import {render, screen, waitFor} from "@testing-library/react";
 import {LatestNews} from "./LatestNews.tsx";
 import React, {ReactNode} from "react";
 import {Provider} from "react-redux";
-import {store} from "../../../store/store.ts";
+import {store} from "@store/store.ts";
 
 describe("LatestNews component", () => {
   const Wrapper: React.FC<{children: ReactNode}> = ({children}) => (

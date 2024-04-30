@@ -1,10 +1,10 @@
 import {renderHook, waitFor} from "@testing-library/react";
 import {DEFAULT_QUERY_LIMIT, useLatestNews} from "./useLatestNews.tsx";
 import {Provider} from "react-redux";
-import {store} from "../../../store/store.ts";
+import {store} from "@store/store.ts";
 import React, {act, ReactNode} from "react";
-import {FirebaseClient} from "../../../services/FirebaseClient.ts";
-import {mockHackerNewsFirebaseAPIData} from "../api/mockHackerNewsFirebaseAPIData.ts";
+import {FirebaseClient} from "@services/FirebaseClient.ts";
+import {mockHackerNewsFirebaseAPIData} from "@features/news/api/mockHackerNewsFirebaseAPIData.ts";
 
 jest.mock("../../../services/FirebaseClient.ts");
 const FirebaseClientMocked = FirebaseClient as jest.MockedClass<

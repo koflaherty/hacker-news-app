@@ -1,5 +1,5 @@
 import {NewsDetail} from "./NewsDetail.tsx";
-import {useAppDispatch, useAppSelector} from "../../../store/hooks.ts";
+import {useAppDispatch, useAppSelector} from "@store/hooks.ts";
 import {StarIcon} from "./StarIcon.tsx";
 import styles from "./styles.module.scss";
 import {toggleStarred} from "../newsSlice.ts";

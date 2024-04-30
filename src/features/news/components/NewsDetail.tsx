@@ -1,6 +1,6 @@
 import {hackerNewsFirebaseApi} from "../api/hacker-news-firebase-api.ts";
 import {toggleStarred} from "../newsSlice.ts";
-import {useAppDispatch, useAppSelector} from "../../../store/hooks.ts";
+import {useAppDispatch, useAppSelector} from "@store/hooks.ts";
 import styles from "./styles.module.scss";
 import {useNewsInfo} from "../hooks/useNewsInfo.ts";
 import pluralize from "pluralize";
