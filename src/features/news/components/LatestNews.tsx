@@ -1,5 +1,5 @@
 import {NewsDetail} from "./NewsDetail.tsx";
-import {useLatestNews} from "../hooks/useLatestNews.tsx";
+import {useLatestNews} from "../hooks/useLatestNews.ts";
 import styles from "./styles.module.scss";
 import {Button} from "@ui/Button.tsx";
 
