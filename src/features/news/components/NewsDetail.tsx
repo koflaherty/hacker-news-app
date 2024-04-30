@@ -21,7 +21,7 @@ export const NewsDetail = ({id}: {id: string}) => {
     return <div className={styles.newsDetailSkeleton} />;
   } else if (data) {
     return (
-      <div className={styles.newsDetail}>
+      <div className={styles.newsDetail} data-testid="news-detail">
         <div className={styles.newsDetailTitleContainer}>
           <a className={styles.newsDetailTitle} href={data.url}>
             {data.title}
