@@ -30,9 +30,9 @@ _hosted here:_ [View Simple Hacker News](https://stunning-chimera-605904.netlify
    1. The theme is written in `.scss` and has both global styles in the `theme/global` folder and CSS modules. I recommend checking out the following files:
       1. [./theme/variables.scss](./src/theme/variables.scss): SCSS Variables for font, colors, and a mobile breakpoint
       2. [./theme/mixins.scss](./src/theme/mixins.scss): Helper mixins for global and CSS modules that can including fonts, breakpoints or clearing list styles.
-      3. [./theme/global/theme.scss](./src/theme/mixins.scss): Sets CSS variables that are used in CSS modules.
+      3. [./theme/global/theme.scss](./src/theme/global/theme.scss): Sets CSS variables that are used in CSS modules.
 
 # To Be Continued!
-1. __Better Testsing:__ There should be more test coverage, _particularly negative testing_, and mock for Hacker News API could be improved.
+1. __Better Testing:__ There should be more test coverage, _particularly negative testing_, and mock for Hacker News API could be improved.
 2. __Improved Loading and Error Components:__ The loading and error components from RTK was a draft and should ideally be better and hardened.
 3. __More Themes, Like Dark Mode!__
